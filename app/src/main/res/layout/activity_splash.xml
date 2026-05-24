@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_bg">
+
+    <!-- Blob top-right -->
+    <View
+        android:id="@+id/blob_tr"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:background="@drawable/shape_blob_blue"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="-60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Blob top-left -->
+    <View
+        android:id="@+id/blob_tl"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/shape_blob_green"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="-80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Logo Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_logo"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:cardBackgroundColor="@color/primary"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.38">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyFlex"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_dark"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="-0.03"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/card_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/tv_tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Smart Rehabilitation Partner"
+        android:textSize="15sp"
+        android:textColor="@color/text_medium"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Pills Row -->
+    <LinearLayout
+        android:id="@+id/pills_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_tagline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI-Powered"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/bg_pill_blue"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rehab Tracking"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/bg_pill_green"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Feature Icons -->
+    <LinearLayout
+        android:id="@+id/features_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/pills_row"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Sessions -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="24dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="@color/white">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_feature_time"
+                    app:tint="@color/accent_blue"
+                    tools:ignore="ContentDescription" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sessions"
+                android:textSize="11sp"
+                android:textColor="@color/text_medium"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Progress -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="24dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="@color/white">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_chart"
+                    app:tint="@color/green_dark"
+                    tools:ignore="ContentDescription" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Progress"
+                android:textSize="11sp"
+                android:textColor="@color/text_medium"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Therapist -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="@color/white">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_person"
+                    app:tint="@color/purple"
+                    tools:ignore="ContentDescription" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Therapist"
+                android:textSize="11sp"
+                android:textColor="@color/text_medium"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Loading Dots -->
+    <LinearLayout
+        android:id="@+id/dots_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_compliance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/shape_dot"
+            android:layout_marginEnd="8dp"/>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/shape_dot"
+            android:layout_marginEnd="8dp"/>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/shape_dot"/>
+    </LinearLayout>
+
+    <!-- Compliance Text -->
+    <TextView
+        android:id="@+id/tv_compliance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Secured · AI-enhanced · GDPR compliant"
+        android:textSize="11sp"
+        android:textColor="@color/text_muted"
+        android:letterSpacing="0.03"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@id/home_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Home Bar -->
+    <View
+        android:id="@+id/home_bar"
+        android:layout_width="120dp"
+        android:layout_height="5dp"
+        android:background="@drawable/shape_home_bar"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

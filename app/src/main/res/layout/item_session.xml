@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/border"
+    app:cardBackgroundColor="@color/surface"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:gravity="center_vertical">
+
+        <!-- Exercise Details -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvExerciseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercise_name_placeholder"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                tools:text="Shoulder Press" />
+
+            <TextView
+                android:id="@+id/tvReps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/session_reps_placeholder"
+                android:textSize="13sp"
+                android:textColor="@color/text_primary"
+                android:alpha="0.7"
+                app:drawableStartCompat="@drawable/ic_feature_time"
+                android:drawablePadding="6dp"
+                app:drawableTint="@color/text_primary"
+                tools:text="15 reps" />
+        </LinearLayout>
+
+        <!-- Metrics & Date -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/tvFormScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/badge_green"
+                android:text="@string/session_score_placeholder"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:text="95%" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/session_date_placeholder"
+                android:textSize="12sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="8dp"
+                android:alpha="0.7"
+                tools:text="Oct 24, 2023" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

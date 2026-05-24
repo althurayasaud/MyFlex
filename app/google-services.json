@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "353427708636",
+    "project_id": "myflex-8551b",
+    "storage_bucket": "myflex-8551b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353427708636:android:460438b9e4e3e76129f219",
+        "android_client_info": {
+          "package_name": "com.example.myflex"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7Y-x8Qd1SoPbwLKKe_dTTgW0twamTvQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

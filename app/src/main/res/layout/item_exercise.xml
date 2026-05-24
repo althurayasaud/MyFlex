@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="16dp"
+    app:strokeColor="@color/border"
+    app:strokeWidth="1dp"
+    app:cardElevation="2dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:gravity="center_vertical">
+
+        <!-- Exercise Image with Rounded Corners -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgExercise"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            android:background="@color/bg_section"
+            app:strokeColor="@color/border"
+            app:strokeWidth="2dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MyFlex.SmallComponent"
+            tools:src="@drawable/exercise" />
+
+        <!-- Main Content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvExerciseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercise_name_placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Shoulder Press" />
+
+            <TextView
+                android:id="@+id/tvExerciseMeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercise_meta_placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp"
+                android:alpha="0.85"
+                tools:text="12 reps • 3 sets" />
+
+            <TextView
+                android:id="@+id/tvDifficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/difficulty_placeholder"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/badge_primary"
+                android:textColor="@color/white"
+                tools:text="Intermediate" />
+        </LinearLayout>
+
+        <!-- Progress Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/tvProgressPct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/progress_placeholder"
+                android:textColor="@color/accent_blue"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="75%" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="48dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="6dp"
+                android:max="100"
+                android:progress="75"
+                android:progressTint="@color/accent_blue"
+                android:progressBackgroundTint="@color/border"
+                tools:progress="75"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

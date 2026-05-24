@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_section">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ===== Hero Header Section ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/primary"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_admin_panel"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/admin_subtitle"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAdminLogout"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_logout"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== Overlapping Content Card ===== -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-40dp"
+            android:background="@drawable/bg_top_rounded_card"
+            android:clipToPadding="false"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_system_management"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_muted"
+                    android:layout_marginBottom="20dp"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.1" />
+
+                <!-- Manage Users -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnManageUsers"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:text="@string/btn_manage_users"
+                    android:backgroundTint="@color/surface"
+                    android:textColor="@color/text_primary"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="16dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/border"
+                    app:icon="@drawable/ic_person"
+                    app:iconTint="@color/purple"
+                    app:iconSize="24dp"
+                    android:layout_marginBottom="16dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="16dp"
+                    android:elevation="2dp"/>
+
+                <!-- View Audit Logs -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAuditLogs"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:text="@string/btn_audit_logs"
+                    android:backgroundTint="@color/surface"
+                    android:textColor="@color/text_primary"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="16dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/border"
+                    app:icon="@drawable/ic_lock"
+                    app:iconTint="@color/accent_blue"
+                    app:iconSize="24dp"
+                    android:layout_marginBottom="16dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="16dp"
+                    android:elevation="2dp" />
+
+                <!-- Compliance Reports -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCompliance"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:text="@string/btn_compliance"
+                    android:backgroundTint="@color/surface"
+                    android:textColor="@color/text_primary"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="16dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/border"
+                    app:icon="@drawable/ic_email"
+                    app:iconTint="@color/accent_green"
+                    app:iconSize="24dp"
+                    android:layout_marginBottom="16dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="16dp"
+                    android:elevation="2dp" />
+
+                <!-- System Config -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSysConfig"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:text="@string/btn_sys_config"
+                    android:backgroundTint="@color/surface"
+                    android:textColor="@color/text_primary"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="16dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/border"
+                    app:icon="@drawable/ic_lock"
+                    app:iconTint="@color/orange"
+                    app:iconSize="24dp"
+                    android:layout_marginBottom="16dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="16dp"
+                    android:elevation="2dp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

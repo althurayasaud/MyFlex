@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">MyFlex</string>
+    <string name="exercise_name_placeholder">Exercise Name</string>
+    <string name="exercise_meta_placeholder">12 reps — Easy</string>
+    <string name="difficulty_placeholder">Easy</string>
+    <string name="progress_placeholder">0%</string>
+    <string name="session_reps_placeholder">12 reps</string>
+    <string name="session_score_placeholder">0%</string>
+    <string name="session_date_placeholder">Today</string>
+    <string name="user_name_placeholder">User Name</string>
+    <string name="user_email_placeholder">user@email.com</string>
+    <string name="user_role_placeholder">Role</string>
+    <string name="log_action_placeholder">Action</string>
+    <string name="log_time_placeholder">Time</string>
+    <string name="log_user_placeholder">User</string>
+    <string name="log_details_placeholder">Details</string>
+    <string name="greeting_default">Good morning</string>
+    <string name="today_plan_title">Today\'s Exercise Plan</string>
+    <string name="today_plan_desc_placeholder">3 exercises assigned by your therapist</string>
+    <string name="btn_start_session">Start Session</string>
+    <string name="label_reps">Reps</string>
+    <string name="label_form">Form</string>
+    <string name="label_fatigue">Fatigue</string>
+    <string name="title_exercises">Exercises</string>
+    <string name="label_ai_active">AI Active</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_progress">Progress</string>
+    <string name="title_admin_panel">Admin Control Center</string>
+    <string name="btn_logout">Logout</string>
+    <string name="label_system_management">System Management</string>
+    <string name="btn_manage_users">Manage Users</string>
+    <string name="btn_audit_logs">View Audit Logs</string>
+    <string name="btn_compliance">Compliance Reports</string>
+    <string name="btn_sys_config">System Configuration</string>
+    <string name="admin_subtitle">Secure administrative access</string>
+    <string name="title_manage_users">Manage Users</string>
+    <string name="label_total_users">Total Users</string>
+    <string name="label_patients">Patients</string>
+    <string name="label_therapists">Therapists</string>
+    <string name="btn_add_user">Add User</string>
+    <string name="title_all_users">All Users</string>
+
+    <!-- Chat -->
+    <string name="chat_initials_placeholder">DT</string>
+    <string name="chat_message_placeholder">Hello</string>
+    <string name="chat_time_placeholder">10:31 AM</string>
+    <string name="chat_header_name">Dr. Therapist</string>
+    <string name="chat_header_status">🩺 Physical Therapist</string>
+    <string name="chat_date_today">Today</string>
+    <string name="chat_empty_state">👋 Send a message!\nAsk your therapist any question.</string>
+    <string name="chat_input_hint">Type a message…</string>
+    <string name="chat_send_desc">Send</string>
+    <string name="chat_back_desc">Back</string>
+
+    <!-- Audit Logs -->
+    <string name="audit_logs_title">Audit Logs</string>
+    <string name="audit_logs_subtitle">Monitor system activity and security</string>
+    <string name="recent_activity">Recent Activity</string>
+    <string name="filter">Filter</string>
+
+    <!-- Compliance Report -->
+    <string name="compliance_title">Compliance Report</string>
+    <string name="compliance_subtitle">Generate patient adherence data</string>
+    <string name="report_options">Report Options</string>
+    <string name="from_date_hint">From Date (YYYY-MM-DD)</string>
+    <string name="to_date_hint">To Date (YYYY-MM-DD)</string>
+    <string name="generate_report">Generate Report</string>
+    <string name="report_results">Report Results</string>
+
+    <!-- System Configuration -->
+    <string name="config_title">System Config</string>
+    <string name="config_subtitle">Adjust application parameters</string>
+    <string name="app_settings_title">Application Settings</string>
+    <string name="app_name_hint">App Name</string>
+    <string name="version_hint">Version</string>
+    <string name="support_email_hint">Support Email</string>
+    <string name="ai_settings_title">AI Settings</string>
+    <string name="confidence_threshold_hint">Confidence Threshold</string>
+    <string name="reps_threshold_hint">Min Reps Threshold</string>
+    <string name="save_configuration">Save Configuration</string>
+    <string name="back">Back</string>
+</resources>

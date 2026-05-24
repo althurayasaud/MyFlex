@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_section">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ===== Hero Header Section ===== -->
+        <LinearLayout
+            android:id="@+id/headerSection"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/primary"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:padding="24dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/greeting_default"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="13sp"
+                    android:layout_marginTop="2dp"
+                    tools:text="Monday, 24 Oct"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAvatar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/circle_blue"
+                android:backgroundTint="#33FFFFFF"
+                android:gravity="center"
+                android:text="AH"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- ===== Main Content Scrollable Area ===== -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="-40dp"
+            android:background="@drawable/bg_top_rounded_card"
+            android:clipToPadding="false"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Today's Plan Banner -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="0dp"
+                    app:cardBackgroundColor="@color/surface">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp">
+
+                            <ImageView
+                                android:id="@+id/imgExerciseBanner"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/img_exercise_banner"
+                                android:contentDescription="@string/today_plan_title" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|end"
+                                android:layout_margin="12dp"
+                                android:text="@string/label_ai_active"
+                                android:textColor="@color/primary"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="5dp"
+                                android:background="@drawable/badge_blue_light" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/today_plan_title"
+                                android:textColor="@color/text_primary"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/tvPlanDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/today_plan_desc_placeholder"
+                                android:textColor="@color/text_muted"
+                                android:textSize="13sp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnStartSession"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:text="@string/btn_start_session"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textAllCaps="false"
+                                app:cornerRadius="16dp"
+                                android:backgroundTint="@color/primary"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Stats Summary Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+                    android:layout_marginTop="20dp"
+                    android:weightSum="3">
+
+                    <!-- Reps -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/border"
+                        app:cardBackgroundColor="@color/surface">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="16dp">
+                            <TextView
+                                android:id="@+id/tvTotalReps"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/primary"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                tools:text="124"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_reps"
+                                android:textColor="@color/text_muted"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Form -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="4dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/border"
+                        app:cardBackgroundColor="@color/surface">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="16dp">
+                            <TextView
+                                android:id="@+id/tvFormScore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/green_dark"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                tools:text="88%"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_form"
+                                android:textColor="@color/text_muted"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Fatigue -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/border"
+                        app:cardBackgroundColor="@color/surface">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="16dp">
+                            <TextView
+                                android:id="@+id/tvFatigue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/accent_pink"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                tools:text="Low"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_fatigue"
+                                android:textColor="@color/text_muted"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <!-- Section Header: Exercises -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_exercises"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginStart="4dp"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Chat with Therapist"
+                    android:src="@drawable/ic_chat"
+                    app:backgroundTint="#3B82F6"
+                    app:tint="#FFFFFF" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvExercises"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/item_exercise"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- Bottom Navigation -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/surface"
+            app:elevation="8dp"
+            app:labelVisibilityMode="labeled"
+            app:itemIconTint="@color/primary"
+            app:itemTextColor="@color/primary"
+            app:menu="@menu/bottom_nav_menu"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
