@@ -76,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
 
         SimpleDateFormat sdf = new SimpleDateFormat("EEEE, MMMM d", Locale.ENGLISH);
         binding.tvDate.setText(sdf.format(new Date()));
+        NotificationHelper.showNotification(
+                this,
+                "Welcome to MyFlex 💪",
+                "Time to complete your therapy exercises."
+        );
     }
 
     // ================= STATS =================
