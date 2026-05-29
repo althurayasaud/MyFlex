@@ -21,6 +21,6 @@ public class AdminComplianceActivity extends AppCompatActivity {
 
     private void generateReport() {
         Toast.makeText(this, "Generating compliance report...", Toast.LENGTH_SHORT).show();
-        // هنا كود إنشاء التقرير
+
     }
 }
