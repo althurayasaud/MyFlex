@@ -45,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
         setupNavigation();
 
         binding.btnStartSession.setOnClickListener(v -> {
+            NotificationHelper.showNotification(
+                    this,
+                    "Exercise Session Started",
+                    "Stay consistent and complete your session today!"
+            );
             startActivity(new Intent(this, ExerciseSessionActivity.class));
         });
     }
