@@ -83,7 +83,7 @@ public class TherapistDashboardActivity extends AppCompatActivity {
 
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(this, "خطأ: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "mistake: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 
