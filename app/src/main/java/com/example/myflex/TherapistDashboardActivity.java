@@ -101,7 +101,7 @@ public class TherapistDashboardActivity extends AppCompatActivity {
         }
     }
 
-    // ✅ دالة منفصلة لفتح المحادثة
+    //Separate function to open the conversation
     private void openChat(User patient) {
         if (patient == null) return;
         Intent intent = new Intent(this, ChatActivity.class);
