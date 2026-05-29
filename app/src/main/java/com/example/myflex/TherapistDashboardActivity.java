@@ -62,10 +62,18 @@ public class TherapistDashboardActivity extends AppCompatActivity {
             // Loading patients
             loadPatients();
 
-            // ✅ الأزرار
-            binding.btnCreatePlan.setOnClickListener(v ->
-                    startActivity(new Intent(this, CreateExerciseActivity.class))
-            );
+            //Buttons
+            binding.btnCreatePlan.setOnClickListener(v -> {
+
+                NotificationHelper.showNotification(
+                        this,
+                        "New Exercise Plan",
+                        "A new therapy exercise has been assigned."
+                );
+
+                startActivity(new Intent(this, CreateExerciseActivity.class));
+
+            });
 
             binding.btnViewReports.setOnClickListener(v ->
                     startActivity(new Intent(this, ProgressReportActivity.class))
