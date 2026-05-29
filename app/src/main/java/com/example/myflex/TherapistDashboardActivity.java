@@ -33,7 +33,7 @@ public class TherapistDashboardActivity extends AppCompatActivity {
             setContentView(binding.getRoot());
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(this, "خطأ في تحميل الواجهة", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error loading interface", Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
