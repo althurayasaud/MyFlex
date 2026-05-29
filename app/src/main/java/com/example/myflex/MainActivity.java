@@ -40,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         setupGreeting();
+        NotificationHelper.showNotification(
+                this,
+                "Test Notification",
+                "MyFlex notifications are working!"
+        );
         setupStats();
         setupExerciseList();
         setupNavigation();
