@@ -119,7 +119,7 @@ public class TherapistDashboardActivity extends AppCompatActivity {
                     patientList.clear();
                     for (QueryDocumentSnapshot doc : query) {
                         try {
-                            // ✅ حماية: تأكد من أن الحقول موجودة
+                            //Protection
                             String id = doc.getId();
                             String name = doc.getString("name");
                             String email = doc.getString("email");
