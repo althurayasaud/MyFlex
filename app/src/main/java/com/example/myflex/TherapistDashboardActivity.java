@@ -91,7 +91,7 @@ public class TherapistDashboardActivity extends AppCompatActivity {
         try {
             binding.rvPatients.setLayoutManager(new LinearLayoutManager(this));
 
-            // ✅ Pass both the list and the click listener (2 arguments)
+            // Pass both the list and the click listener (2 arguments)
             userAdapter = new UserAdapter(patientList, this::openChat);
             binding.rvPatients.setAdapter(userAdapter);
 
