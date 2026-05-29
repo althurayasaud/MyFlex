@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         db = FirebaseFirestore.getInstance();
+        NotificationHelper.createNotificationChannel(this);
 
         setupGreeting();
         NotificationHelper.showNotification(
