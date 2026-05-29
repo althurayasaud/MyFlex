@@ -48,7 +48,6 @@ public class TherapistDashboardActivity extends AppCompatActivity {
             if (name == null || name.isEmpty() || name.equals("User")) {
                 binding.tvTherapistName.setText("Therapist");
             } else {
-                // حماية ضد name.split إذا كان الاسم بدون مسافات
                 String firstName = name;
                 if (name.contains(" ")) {
                     firstName = name.split(" ")[0];
@@ -56,7 +55,6 @@ public class TherapistDashboardActivity extends AppCompatActivity {
                 binding.tvTherapistName.setText("Dr. " + firstName);
             }
 
-            // ✅ تهيئة RecyclerView بالطريقة الصحيحة
             setupRecyclerView();
 
             // Loading patients
