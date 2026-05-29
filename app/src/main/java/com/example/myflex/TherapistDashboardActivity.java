@@ -125,7 +125,7 @@ public class TherapistDashboardActivity extends AppCompatActivity {
                             String email = doc.getString("email");
                             String role = doc.getString("role");
 
-                            if (name == null) name = "مريض";
+                            if (name == null) name = "patient";
                             if (email == null) email = "";
                             if (role == null) role = "patient";
 
