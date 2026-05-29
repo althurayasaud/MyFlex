@@ -43,7 +43,7 @@ public class TherapistDashboardActivity extends AppCompatActivity {
             db = FirebaseFirestore.getInstance();
             patientList = new ArrayList<>();
 
-            // ✅ قراءة الاسم مع حماية كاملة
+            // Read Name
             String name = sm.getName();
             if (name == null || name.isEmpty() || name.equals("User")) {
                 binding.tvTherapistName.setText("Therapist");
