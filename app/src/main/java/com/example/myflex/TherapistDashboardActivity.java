@@ -138,7 +138,7 @@ public class TherapistDashboardActivity extends AppCompatActivity {
                     userAdapter.notifyDataSetChanged();
 
                     if (patientList.isEmpty()) {
-                        Toast.makeText(this, "لا يوجد مرضى", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "no patient", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(e -> {
