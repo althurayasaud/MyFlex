@@ -97,7 +97,7 @@ public class TherapistDashboardActivity extends AppCompatActivity {
 
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(this, "خطأ في إعداد القائمة: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error setting menu: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 
