@@ -27,7 +27,7 @@ public class TherapistDashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // ✅ حماية: تأكد من وجود binding قبل أي شيء
+        //Protection
         try {
             binding = ActivityTherapistDashboardBinding.inflate(getLayoutInflater());
             setContentView(binding.getRoot());
