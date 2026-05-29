@@ -59,7 +59,7 @@ public class TherapistDashboardActivity extends AppCompatActivity {
             // ✅ تهيئة RecyclerView بالطريقة الصحيحة
             setupRecyclerView();
 
-            // ✅ تحميل المرضى
+            // Loading patients
             loadPatients();
 
             // ✅ الأزرار
